@@ -1,0 +1,457 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary-color: #2D3250;
+    --accent-color: #7077A1;
+    --background-color: #F6F4EB;
+    --text-color: #424769;
+    --error-color: #FF6B6B;
+    --success-color: #51cf66;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.site-header h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.tagline {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.upload-section {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.upload-container {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    animation: slideUp 0.8s ease-out;
+}
+
+.upload-zone {
+    border: 2px dashed var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.upload-zone:hover, .upload-zone.highlight {
+    border-color: var(--primary-color);
+    background-color: rgba(112, 119, 161, 0.05);
+}
+
+.upload-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.upload-text {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.analyze-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    transition: transform 0.2s ease;
+}
+
+.analyze-btn:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    color: var(--accent-color);
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert-error {
+    background-color: #fff5f5;
+    color: var(--error-color);
+}
+
+.alert-icon {
+    font-weight: bold;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--error-color);
+    color: white;
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 1rem;
+    }
+    
+    .site-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .upload-container {
+        padding: 1rem;
+    }
+}
+
+
+/* Add these styles after your existing CSS */
+
+.result-section {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.result-container,.youtube-cards {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    animation: slideUp 0.8s ease-out;
+}
+
+.result-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.fake-result {
+    background-color: #fff5f5;
+    border: 1px solid #fee;
+}
+
+.real-result {
+    background-color: #f3faf7;
+    border: 1px solid #def7ec;
+}
+
+.result-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.result-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.warning-icon {
+    fill: var(--error-color);
+}
+
+.check-icon {
+    fill: var(--success-color);
+}
+
+.result-details,.youtube-video-card {
+    flex-grow: 1;
+}
+
+.result-details h2 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.prediction {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.fake-result .prediction {
+    color: var(--error-color);
+}
+
+.real-result .prediction {
+    color: var(--success-color);
+}
+
+.confidence-meter {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.confidence-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 1s ease-out;
+}
+
+.confidence-text {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.analysis-info {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.analysis-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.analysis-info code {
+    background: #e9ecef;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .result-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .result-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .prediction {
+        font-size: 2rem;
+    }
+}
+.additional-info-container{
+    padding:2%
+}
+
+
+
+.large-card {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-channel-card {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.youtube-channel-card h3 a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+.youtube-channel-card p {
+    margin: 5px 0;
+}
